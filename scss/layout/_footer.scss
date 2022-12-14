@@ -1,0 +1,30 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: lighten(#000, 30%);
+    color: #fff;
+    @include section-fit;
+    @include page-padding;
+
+    p{
+        font-size: 20px;
+        font-family:  Shrikhand;
+    }
+
+    a{
+        color: #fff;
+        margin: 5px 0px 5px 0px;
+
+        i{
+            margin-right: 15px;
+        }
+    }
+}
+
+@media  screen and (min-width: 992px) {
+    .footer{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

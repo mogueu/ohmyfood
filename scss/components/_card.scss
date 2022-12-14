@@ -1,0 +1,52 @@
+@import "./favorite";
+
+.restaurant-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px 0px 15px 0px;
+    background-color: #fff;
+    @include shadow;
+    border-radius: 15px;
+
+    &-img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 15px 15px 0px 0px;
+    }
+    &-description{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .new-label{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: $tertiary-color;
+        font-weight: bold;
+        color: darken($tertiary-color, 30%);
+    }
+
+}
+
+@media  screen and (min-width: 560px) {
+    
+    .restaurant-item{
+        width: 45%;
+        margin: 15px
+    }
+}
+
+@media  screen and (min-width: 992px) {
+    
+    .restaurant-item{
+        width: 23%;
+    }
+}

@@ -1,0 +1,16 @@
+.favorite{
+    width: 50px;
+    text-align: right;
+    font-size: 22px;
+    .fa-heart{
+        color: #000;
+        transition: all 1000ms;
+        
+        &:hover{
+            font-weight: bold;  
+            color: transparent;
+            background-clip: text;
+            background-image: linear-gradient(to top, $primary-color, $secondary-color);          
+        }
+    }
+}
