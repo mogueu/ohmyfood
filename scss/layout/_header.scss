@@ -4,6 +4,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    @include page-padding;
+
+    a{
+        font-size: 24px;
+        font-weight: bold;
+        position: absolute;
+        left: 30px;
+    }
 
     img{
         width: 200px;

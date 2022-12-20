@@ -1,0 +1,92 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/extensions";
+@import "./base/base";
+@import "./components/button";
+@import "./components/favorite";
+@import "./components/plate";
+@import "./layout/header";
+@import "./layout/footer";
+
+.banner{
+    width: 100%;
+    img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+.menu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: -50px;
+    @include border-radius-fit(30px,30px,0px,0px);
+    @include page-padding;
+    @include section-fit;
+    background-color: #eee;
+
+    .page-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .button-block{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include section-fit(15px);
+    }
+}
+
+.categories{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    &-category{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+
+        &-plates{
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2{
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .title-border{
+            width: 50px;
+            border: 2px solid $tertiary-color;
+            margin-bottom: 30px;
+        }
+    }
+  
+}
+
+@media  screen and (min-width: 560px) {
+    .categories{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &-category{
+            width: 45%;
+            margin: 2%;
+        }
+    }
+}
+
+@media screen and (min-width: 992px){
+    .categories-category{
+        width: 30%;
+        margin: 1%;
+    }
+}
