@@ -68,16 +68,13 @@ a {
 .plate {
   position: relative;
   width: 100%;
+  height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
   background-color: #fff;
   margin-bottom: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -85,28 +82,32 @@ a {
   box-shadow: 0px 5px 5px 0px #ccc;
 }
 .plate .description {
-  width: 80%;
+  margin: 15px;
+  overflow: hidden;
+  flex-grow: 1;
 }
 .plate-name, .plate-content {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   margin-bottom: 0px;
+  margin-top: 5px;
 }
 .plate .price {
+  width: 50px;
   text-align: right;
   align-self: flex-end;
   font-weight: bold;
+  margin-bottom: 15px;
+  margin-right: 15px;
 }
 .plate .add-to-cart {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 70px;
+  width: 0px;
   height: 100%;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   background-color: #99E2D0;
   color: #fff;
   font-size: 24px;
@@ -114,6 +115,14 @@ a {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 0px;
+  transition: width 500ms;
+}
+.plate:hover > .add-to-cart {
+  width: 70px;
+}
+.plate:hover > .add-to-cart i {
+  transform: rotate(1turn);
+  transition: transform 500ms;
 }
 
 .header {
