@@ -58,6 +58,11 @@
         margin-bottom: 30px;
         @include shadow;
 
+        &:hover{
+            color: $primary-color;
+            background-color: lighten($primary-color, 30%);
+        }
+
         .number{
             display: flex;
             justify-content: center;

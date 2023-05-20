@@ -4,13 +4,15 @@
     font-size: 22px;
     .fa-heart{
         color: #000;
-        transition: all 1000ms;
+        transition: all 1000ms backwards;
         
         &:hover{
             font-weight: bold;  
             color: transparent;
             background-clip: text;
-            background-image: linear-gradient(to top, $primary-color, $secondary-color);          
+            background-image: linear-gradient(to top, $primary-color, $secondary-color);  
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;        
         }
     }
 }

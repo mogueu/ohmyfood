@@ -14,4 +14,7 @@
 .button-primary{
     background-image: linear-gradient($secondary-color 5%, $primary-color);
     color: #fff;
+    &:hover{
+        filter: brightness(120%);
+    }
 }

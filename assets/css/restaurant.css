@@ -48,6 +48,9 @@ a {
   background-image: linear-gradient(#FF79DA 5%, #9356DC);
   color: #fff;
 }
+.button-primary:hover {
+  filter: brightness(120%);
+}
 
 .favorite {
   width: 50px;
@@ -56,13 +59,15 @@ a {
 }
 .favorite .fa-heart {
   color: #000;
-  transition: all 1000ms;
+  transition: all 1000ms backwards;
 }
 .favorite .fa-heart:hover {
   font-weight: bold;
   color: transparent;
   background-clip: text;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .plate {
