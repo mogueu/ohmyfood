@@ -1,8 +1,6 @@
-.footer{
+.footer-content{
     display: flex;
     flex-direction: column;
-    background-color: lighten(#000, 30%);
-    color: #fff;
     @include section-fit;
     @include page-padding;
 
@@ -21,8 +19,13 @@
     }
 }
 
+.footer{
+    background-color: lighten(#000, 30%);
+    color: #fff;
+}
+
 @media  screen and (min-width: 992px) {
-    .footer{
+    .footer-content{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;

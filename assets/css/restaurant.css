@@ -31,6 +31,12 @@ a {
   color: #000;
 }
 
+@media screen and (min-width: 992px) {
+  .steps, .restaurants-list, .footer-content, .performance h2, .restaurants h2, .menu {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
 .button {
   width: auto;
   padding: 15px 30px;
@@ -131,6 +137,8 @@ a {
 }
 
 .header {
+  max-width: 1400px;
+  margin: auto;
   height: 70px;
   display: flex;
   flex-direction: row;
@@ -150,30 +158,33 @@ a {
   height: auto;
 }
 
-.footer {
+.footer-content {
   display: flex;
   flex-direction: column;
-  background-color: #4d4d4d;
-  color: #fff;
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
   padding-right: 30px;
 }
-.footer p {
+.footer-content p {
   font-size: 20px;
   font-family: Shrikhand;
 }
-.footer a {
+.footer-content a {
   color: #fff;
   margin: 5px 0px 5px 0px;
 }
-.footer a i {
+.footer-content a i {
   margin-right: 15px;
 }
 
+.footer {
+  background-color: #4d4d4d;
+  color: #fff;
+}
+
 @media screen and (min-width: 992px) {
-  .footer {
+  .footer-content {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
